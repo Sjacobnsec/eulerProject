@@ -1,21 +1,27 @@
+// This is messy but it does work 
+
 var myArray = [1, 2];
+var i; 
 
-/* The for loop creates the i variable and the fib sequence relies on it
-this creates problems when I change the termination variable to anything other than 
-a 10 */
-
-for (i = 0; i < 10; i++){
-    myArray.push((myArray[i + 1]) + (myArray[i])); //fib sequence 
-	if (myArray[i] % 2 !== 0) {
-		console.log("Odd");
-		delete myArray[i];
-	} 
+for (i = 0; i < 50; i++){
+    myArray.push((myArray[i + 1]) + (myArray[i]));
+    if (myArray[i] % 2 !== 0) { 
+        //console.log("odd");
+        delete myArray[i];
+    }
 }
 
-var sum = myArray.reduce(function(a, b) {
-	return a + b;
+for (i = 0; i < 100; i++){   		//Deletes anything in the array larger than 4 million
+     if (myArray[i] > 4000000) {
+        delete (myArray[i]);
+        
+    }
+}
+
+
+var sum = myArray.reduce(function(a, b){	//sum of the array 
+    return a + b;
 });
 
-console.log(sum);
 console.log(myArray);
-
+console.log(sum);
