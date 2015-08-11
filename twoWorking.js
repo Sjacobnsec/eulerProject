@@ -8,6 +8,10 @@ for (i = 0; i < 10; i++){
 	} 
 }
 
+var sum = myArray.reduce(function(a, b) {
+	return a + b;
+});
 
+console.log(sum);
 console.log(myArray);
 
