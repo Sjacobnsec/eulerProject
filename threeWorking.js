@@ -22,7 +22,7 @@ console.log(myArray); */
 var num = 600851475143;
 i = 0; 
 
-for (i = 0; i <= 1000; i++) {
+for (i = 0; i <= 7000; i++) {
     if (num % i === 0) {
         console.log(i);
         console.log("yay");
